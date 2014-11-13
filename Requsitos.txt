@@ -1,5 +1,5 @@
 
-Repositorio GitHub
+Repositorio GitHub de SoftMasters
 
 Nombre del Repositorio:
 -	Repositorio-Compartido
@@ -43,6 +43,12 @@ copia debe activarse manualmente.
 RF0003­IMPRIMIR: Poder impirmir la agenda en texto plano o HTML.
 
 RF0004­INTERFAZ: La interfaz debe ser simple y de texto por consola.
+
+RF0005FAVORITOS: El programa debera poder permitir elegir contactos como favorito.
+
+RF0006FRECUENTES: El programa mostrara aquellos contactos mas frecuentes.
+
+FAVORITOS Y FRECUENTES --> Correccion realizada por Javier.
 
 -------------------------------------------------------------------------------------------
 Requisitos no funcionales.-----------------------------------------------------------------
