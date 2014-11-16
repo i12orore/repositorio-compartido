@@ -12,7 +12,8 @@ Nombre de los participantes del repositorio:
 -	i42ditac : Carlos Diestro Tamayo
 -	i12maroa : Antonio Maestre Rosa
 
-
+Dirección del repositorio:
+- https://github.com/i12orore/repositorio-compartido.git
 
 
 -------------------------------------------------------------------------------------------

@@ -1,0 +1,75 @@
+
+Repositorio GitHub de SoftMasters
+
+Nombre del Repositorio:
+-	Repositorio-Compartido
+
+Nombre del administrador del repositorio: 
+-	i12orore : José Enrique Ortega Ortega
+
+Nombre de los participantes del repositorio:
+-	i12malod : David Martínez Lora
+-	i42ditac : Carlos Diestro Tamayo
+-	i12maroa : Antonio Maestre Rosa
+
+Dirección del repositorio:
+- https://github.com/i12orore/repositorio-compartido.git
+
+
+-------------------------------------------------------------------------------------------
+--------------------------------Extraccion de Requisitos-----------------------------------
+-------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------
+Requisitos funcionales.--------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+
+RF0001­BUSCAR: Busqueda en la agenda de un contacto por medio de la introducción del
+
+apellido.
+
+RF0001­ORDENACION: Ordenacion de la agenda alfabéticamente atendiendo al apellido.
+
+RF0001­INSERTAR: Capacidad de insertar un nuevo contacto en la agenda.
+
+RF0001­MODIFICAR: Modificacion de un usuario para editar alguna de sus características.
+
+RF0001­BORRAR: Permitir borrar datos de la agenda.
+
+RF0002­SEGURIDAD: Se realizar una copia de seguiradad de los datos en un archivo local, esta
+
+copia debe activarse manualmente.
+
+RF0003­IMPRIMIR: Poder impirmir la agenda en texto plano o HTML.
+
+RF0004­INTERFAZ: La interfaz debe ser simple y de texto por consola.
+
+RF0005FAVORITOS: El programa debera poder permitir elegir contactos como favorito.
+
+RF0006FRECUENTES: El programa mostrara aquellos contactos mas frecuentes.
+
+FAVORITOS Y FRECUENTES --> Correccion realizada por Javier.
+
+-------------------------------------------------------------------------------------------
+Requisitos no funcionales.-----------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+
+RNF0001­LENGUAJE: El lenguaje a usar será C++.
+
+RNF0002­PLATAFORMA: Debe poder ejecutarse en cualquier distribución de Linux.
+
+RNF0003­DATOS: El volumen de datos máximo con el que trabajaremos será de 200.
+
+RNF0004­ALMACENAMIENTO: Se almacenara en texto plano o binario.
+
+-------------------------------------------------------------------------------------------
+Requisitos de usuario----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+
+RU0001­IMPRESION: Imprimir de forma bonita y en HTML la agenda.
+
+RU0002­SIN_LOGIN: No es necesario el login para acceder a la agenda.
+
+
+
