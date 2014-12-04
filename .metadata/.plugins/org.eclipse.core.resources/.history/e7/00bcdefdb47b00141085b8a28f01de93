@@ -25,7 +25,6 @@ class Contacto {
 		std::string _dni;
 		telefonos _telefono;
 		emails _email;
-		std::string _anotaciones;
 
 public:
 	Contacto();
