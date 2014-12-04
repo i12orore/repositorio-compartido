@@ -1,0 +1,23 @@
+/*
+ * Agenda.h
+ *
+ *  Created on: 04/12/2014
+ *      Author: falanhx
+ */
+
+#ifndef AGENDA_H_
+#define AGENDA_H_
+
+#include"Contacto.h"
+
+
+
+class Agenda {
+private:
+
+public:
+	Agenda();
+	virtual ~Agenda();
+};
+
+#endif /* AGENDA_H_ */

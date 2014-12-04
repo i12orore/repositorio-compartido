@@ -16,14 +16,3 @@ Agenda::~Agenda() {
 	// TODO Auto-generated destructor stub
 }
 
-
-Agenda::mostrar()
-{
-	Agenda c;
-
-	//recorremos fichero.
-
-
-
-
-}
