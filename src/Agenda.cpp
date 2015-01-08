@@ -1,7 +1,7 @@
 /*
  * Agenda.cpp
  *
- *  Created on: 04/12/2014
+ *  Created on: 08/01/2015
  *      Author: falanhx
  */
 
@@ -15,5 +15,4 @@ Agenda::Agenda() {
 Agenda::~Agenda() {
 	// TODO Auto-generated destructor stub
 }
-
 
