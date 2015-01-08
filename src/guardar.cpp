@@ -36,7 +36,7 @@ void Agenda::guardar(const vector<Contacto> &_vector_contactos, string fichero)
 
 void Agenda::cargar(vector<Contacto> & _vector_contactos, string fichero)
 {
-    vector<Contacto>::iterator it;
+    //vector<Contacto>::iterator it;
     Contacto aux;
 
     if(existeFichero(fichero))
