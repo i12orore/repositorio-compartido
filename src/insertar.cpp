@@ -1,3 +1,12 @@
+/*
+
+	Realizado por José Enrique Ortega Ortega
+
+	7/1/15
+
+*/
+
+
 #include"Agenda.h"
 #include"Contacto.h"
 #include<vector>
@@ -27,9 +36,19 @@ void Agenda::insertar(Contacto _contactos)
 }
 
 
-//Borrar por apellido
-void Agenda::borrar(Contacto _contactos)
+//Borrar por DNI
+void Agenda::borrar(Contacto _contactos,string dni)
 {
-	buscarContacto()
-	_contactos.pop_back(aux);
+	int encontrado=0;
+	for(i=0;i<_contactos.size();i++)
+	{
+		if(( dni==_contactos._dni)&&(encontrado==0))
+		{
+			
+			_contactos.erase(i);
+			encontrado=1;
+
+		}
+	}
+	
 }
