@@ -17,13 +17,3 @@ Agenda::~Agenda() {
 }
 
 
-Agenda::mostrar()
-{
-	Agenda c;
-
-	//recorremos fichero.
-
-
-
-
-}

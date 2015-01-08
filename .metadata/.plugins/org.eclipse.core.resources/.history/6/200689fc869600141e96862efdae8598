@@ -1,0 +1,16 @@
+#include"agenda.h"
+#include<vector>
+
+
+Agenda::insertar(Contacto _contactos)
+{
+	int i;
+	for(c = 0: c < (capacidad del vector); c++)
+	{
+	strcpy(mi_vector_estructura[c].dia_str,<... del día>);
+	mi_vector_estructura[c].dia = <variable numerica de dia>;
+	mi_vector_estructura[c].mes = <variable numerica de mes>;
+	mi_vector_estructura[c].anio = <variable numerica del año>;
+	mi_vector_estructura[c].numero = <variable del numero de loteria>;
+	}
+}

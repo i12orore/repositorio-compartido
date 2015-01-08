@@ -9,15 +9,16 @@
 #define AGENDA_H_
 
 #include"Contacto.h"
-#include<list>
+#include<vector>
 
 
 class Agenda {
 private:
-	Contacto <list> _contactos;
+	std::vector <Contacto> _contactos;
 public:
 	Agenda();
 	virtual ~Agenda();
+	void insertar(Contacto _contactos);
 };
 
 #endif /* AGENDA_H_ */

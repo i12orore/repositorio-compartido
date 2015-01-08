@@ -1,0 +1,24 @@
+#include"agenda.h"
+#include<vector>
+#include<string>
+#include<iostream>
+#include<cstdio>
+
+
+using namespace std;
+
+Agenda::insertar(Contacto _contactos)
+{
+	int i;
+	Contacto aux;
+	for(i=0;i <_contactos.size();i++)
+	{
+		cout<<"Introduce el nombre de la persona"<<endl;
+		getchar(aux.nombre);
+		cout<<"Introduce los apellidos de la persona"<<endl;
+		getchar(aux.apellidos);
+		cout<<"Introduce el DNI de la persona"<<endl;
+		getchar(aux.dni);
+		cout<<"Introduce "
+	}
+}

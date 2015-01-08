@@ -39,7 +39,7 @@ private:
 		emails _email;
 		direccion _direcciones;
 		std::string _anotaciones;
-		bool _favorito;
+		bool _favorito=false;
 		redes_sociales _redes;
 public:
 	Contacto();
