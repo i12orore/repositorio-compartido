@@ -8,60 +8,16 @@
 #ifndef CONTACTO_H_
 #define CONTACTO_H_
 
-struct telefonos {
-	int fijo;
-	int movil;
-};
-
-struct emails {
-	std::string personal;
-	std::string trabajo;
-};
-
-struct direccion{
-	std::string dir1;
-	std::string dir2;
-};
-
-struct redes_sociales{
-	std::string facebook;
-	std::string twitter;
-	std::string instagram;
-	std::string google_plus;
-};
-
 class Contacto {
 private:
 		std::string _nombre;
 		std::string _apellidos;
 		std::string _dni;
-		telefonos _telefono;
-		emails _email;
-		direccion _direcciones;
-		std::string _anotaciones;
-		bool _favorito=false;
-		redes_sociales _redes;
+		std::string _direccion;
+		std::string _telefono;
 public:
-	Contacto();
-	virtual ~Contacto();
-	const std::string& getAnotaciones() const;
-	void setAnotaciones(const std::string& anotaciones);
-	const std::string& getApellidos() const;
-	void setApellidos(const std::string& apellidos);
-	const direccion& getDirecciones() const;
-	void setDirecciones(const direccion& direcciones);
-	const std::string& getDni() const;
-	void setDni(const std::string& dni);
-	const emails& getEmail() const;
-	void setEmail(const emails& email);
-	bool isFavorito() const;
-	void setFavorito(bool favorito);
-	const std::string& getNombre() const;
-	void setNombre(const std::string& nombre);
-	const redes_sociales& getRedes() const;
-	void setRedes(const redes_sociales& redes);
-	telefonos getTelefono() const;
-	void setTelefono(telefonos telefono);
+
+		
 };
 
 #endif /* CONTACTO_H_ */
