@@ -10,20 +10,24 @@
 
 #include <iostream>
 #include <fstream>
+#include <cstdio>
+#include <stdio.h>
 
 using namespace std;
 
-void Agenda::guardar(const vector<Contacto> &_vector_contactos, string fichero)
+void guardar(const vector<Contacto> &_contactos, string fichero)
 {
-    vector<Contacto>::const_iteraror it; //Declaración de iterador const_iterator it para recorrer el vector
-    ifstream flujoSalida;
+    vector<Contacto>::const_iterator it; //Declaración de iterador const_iterator it para recorrer el vector
+    ofstream flujoSalida;
     
-    flujoSalida.open(fichero.c_str(),ios::out);//Se abre el fichero para escribir
+    //flujoSalida.open(fichero.c_str(),ios::out);//Se abre el fichero para escribir
+    //File * flujoSalida;
     
     if(flujoSalida) //El fichero se ha abierto correctamente
     {
-        for (it=_vector_contactos.begin();it!=_vector_contactos.end() ; it++) { //Recorremos el vector
-                fwrite(*it, sizeof(Contacto),1,fichero);    //Guardamos cada contacto en el fichero
+        for (it=_contactos.begin();it!=_contactos.end() ; it++) { //Recorremos el vector
+                flujoSalida.write((char*) (&*it), sizeof(Contacto));    //Guardamos cada contacto en el fichero
+           
         }
         flujoSalida.close(); //Cerramos el fichero
     }
@@ -34,19 +38,21 @@ void Agenda::guardar(const vector<Contacto> &_vector_contactos, string fichero)
     }
 }
 
-void Agenda::cargar(vector<Contacto> & _vector_contactos, string fichero)
+void cargar(vector<Contacto> & _contactos, string fichero)
 {
     //vector<Contacto>::iterator it;
     Contacto aux;
+    ifstream flujoEntrada; //Declaración del flujo de entrada
+    flujoEntrada.open(fichero.c_str(),ios::in);//Se abre el fichero para leer
 
-    if(existeFichero(fichero))
+    if(flujoEntrada)
     {
-        flujoEntrada.read((char *) (&aux), sizeof(Contacto)); //Se lee el primero
-        
-        while (flujoEntrada!=flujoEntrada.feof())//Mientras no se llegue al final del fichero
+         //Se lee el primero
+        //flujoEntrada!=flujoEntrada.feof()
+        while (flujoEntrada.read((char *) (&aux), sizeof(Contacto)))//Mientras no se llegue al final del fichero
         {
-            _vector_contactos.push_back(aux);   //Se inserta el contacto leido en el vector
-            flujoEntrada.read((char *) (&aux), sizeof(Contacto));  //Se lee el siguiente
+            _contactos.push_back(aux);   //Se inserta el contacto leido en el vector
+            //flujoEntrada.read((char *) (&aux), sizeof(Contacto));  //Se lee el siguiente
         }
         
         flujoEntrada.close();  //Cerramos el fichero

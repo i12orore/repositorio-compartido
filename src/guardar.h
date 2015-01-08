@@ -9,9 +9,9 @@
 #ifndef ____guardar__
 #define ____guardar__
 
-#include <Agenda.h>
+#include "Agenda.h"
 
-void guardar(const vector<Contacto> &_vector_contactos, string fichero);
-void cargar(vector<Contacto> & _vector_contactos, string fichero);
-bool existeFichero(string fichero);
+void guardar(const std::vector<Contacto> &_vector_contactos, std::string fichero);
+void cargar(std::vector<Contacto> & _vector_contactos, std::string fichero);
+bool existeFichero(std::string fichero);
 #endif /* defined(____guardar__) */
