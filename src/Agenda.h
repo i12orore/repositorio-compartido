@@ -36,6 +36,9 @@ public:
 	void setContactos(vector<Contacto> contactos) {
 		_contactos = contactos;
 	}
+
+	void buscarContacto(string apellido,vector<Contacto> & aux);
+	void Agenda::BuscarFavoritos(vector<Contacto> &_contactoaux);
 };
 
 #endif /* AGENDA_H_ */

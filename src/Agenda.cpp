@@ -37,5 +37,51 @@ void Agenda::borrar(Contacto aux,string dni)
 
 		}
 	}
+
+void Agenda::buscarContacto(string apellido,vector<Contacto> & aux)
+{
+	/* Recorrer el vector y meter en un vector auxiliar las coincidencias, por referencia*/
+	int i, n=0;
+	vector<Contacto> aux;
+
+	for(i=0;i<_contactos.size();i++)
+	{
+			if(_contactos.apellidos==apellido)
+				{
+					f=1;
+					_contactoaux.push_back(_contactos[i]);
+
+				}
+			}
+			if(f==0)
+			{
+				cout<<"No hay ningun contacto favorito"<<endl;
+			}
+
+
+		}
+
+
+	void Agenda::BuscarFavoritos(vector<Contacto> &_contactoaux)
+{
+	int i,f=0;
+	/*Recorrer el vector y meter en un vector auxiliar las coincidencias, por referencia*/
+
+	for(i=0;i<_contactos.size();i++)
+	{
+		if(_contactos.favorito==1)
+		{
+			f=1;
+			_contactoaux.push_back(_contactos[i]);
+
+		}
+	}
+	if(f==0)
+	{
+		cout<<"No hay ningun contacto favorito"<<endl;
+	}
+
+
+}
 	
 }

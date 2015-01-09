@@ -63,7 +63,15 @@ main()
 				cin>>dni;
 				aux2.setContactos(borrar(dni,aux2.getContactos()));
 				break;
-
+			case 4:
+				cout<<"Introduce el apellido del contacto que deseas buscar"<<endl;
+				cin>>apellido;
+				buscarContacto(apellido, &_aux2)
+				break;
+			case 4:
+				cout<<"Mostrar los contactos favoritos"<<endl;
+				BuscarFavoritos(&_aux2);
+				break;		
 		}
 
 
