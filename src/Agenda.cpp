@@ -85,3 +85,47 @@ void Agenda::buscarContacto(string apellido,vector<Contacto> & aux)
 }
 	
 }
+
+void Agenda::modificar(std::string dni, Contacto c) {
+    Contacto aux;	//Objeto contacto auxiliar para almacenar los nuevos datos
+
+    //Para modificar cualquier campo es necesario que el usuario escriba los datos por los que sera reemplazado,
+    //de lo contrario no se actualizara el campo
+    std::cout << "Deja el campo vacio si no lo quieres modificar";
+
+    //Modificar nombre
+    std::cout << "Nombre: ";
+    getline(std::cin, aux._nombre);
+    if(!aux._nombre.empty())
+        c.setNombre(aux._nombre);
+
+    //Modificar apellidos
+    std::cout << "Apellidos: ";
+    getline(std::cin, aux._apellidos);
+    if(!aux._apellidos.empty())
+        c.setApellidos(aux._apellidos);
+
+    //Modificar DNI
+    std::cout << "DNI: ";
+    getline(std::cin, aux._dni);
+    if(!aux._dni.empty())
+        c.setDni(aux._dni);
+
+    //Modificar telefono
+    std::cout << "Telefono movil: ";
+    getline(std::cin, aux._telefono);
+    if(!aux._telefono.empty())
+        c.setTelefono(aux._telefono);
+
+    //Modificar email
+    std::cout << "Email peronal: ";
+    getline(std::cin, aux._email);
+    if(!aux._email.empty())
+        c.setEmail(aux._email);
+
+    //Modificar direccion
+    std::cout << "Direccion: ";
+    getline(std::cin, aux._direccion);
+    if(!aux._direccion.empty())
+        c.setDireccion(aux._direccion);
+}
