@@ -28,6 +28,7 @@ public:
 
 	void insertar(Contacto _contactos);
 	void borrar(Contacto _contactos,string dni);
+	void modificar(string dni, Contacto c);
 
 	vector<Contacto> getContactos() const {
 		return _contactos;

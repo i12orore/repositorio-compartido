@@ -26,6 +26,7 @@ private:
 	string _apellidos;
 	string _direccion;
 	string _telefono;
+	string _email;
 	string _dni;
 
 public:
@@ -70,6 +71,14 @@ public:
 
 	void setTelefono(const string& telefono) {
 		_telefono = telefono;
+	}
+
+	const string& getEmail() const {
+		return _email;
+	}
+
+	void setEmail(const string& email) {
+		_email = email;
 	}
 };
 
