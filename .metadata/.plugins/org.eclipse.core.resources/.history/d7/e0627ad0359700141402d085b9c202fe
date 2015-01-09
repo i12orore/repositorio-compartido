@@ -1,0 +1,34 @@
+/*
+ * Agenda.h
+ *
+ *  Created on: 08/01/2015
+ *      Author: falanhx
+ */
+
+#ifndef AGENDA_H_
+#define AGENDA_H_
+
+#include "Contacto.h"
+#include <vector>
+#include <string>
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+
+class Agenda {
+private:
+	vector <Contacto> _contactos;
+public:
+	Agenda();
+	virtual ~Agenda();
+
+	vector<Contacto> getContactos() const {
+		return _contactos;
+	}
+
+	void setContactos(vector<Contacto> contactos) {
+		_contactos = contactos;
+	}
+};
+
+#endif /* AGENDA_H_ */

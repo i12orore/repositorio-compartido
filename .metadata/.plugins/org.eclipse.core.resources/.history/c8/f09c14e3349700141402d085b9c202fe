@@ -1,0 +1,17 @@
+/*
+ * Contacto.h
+ *
+ *  Created on: 08/01/2015
+ *      Author: falanhx
+ */
+
+#ifndef CONTACTO_H_
+#define CONTACTO_H_
+
+class Contacto {
+public:
+	Contacto();
+	virtual ~Contacto();
+};
+
+#endif /* CONTACTO_H_ */

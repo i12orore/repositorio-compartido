@@ -2,7 +2,7 @@
  * Contacto.cpp
  *
  *  Created on: 08/01/2015
- *      Author: falanhx
+ *      Author: José Enrique Ortega Ortega
  */
 
 #include "Contacto.h"

@@ -1,0 +1,17 @@
+/*
+
+	Realizado por José Enrique Ortega
+
+	Funcion Main y menu de implementación
+
+
+*/
+#include "Agenda.h"
+#include "Contacto.h"
+#include <iostream>
+
+using namespace std;
+int main()
+{
+
+}

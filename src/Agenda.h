@@ -15,6 +15,10 @@
 #include <cstdio>
 #include <cstdlib>
 
+
+
+ using namespace std;
+
 class Agenda {
 private:
 	vector <Contacto> _contactos;

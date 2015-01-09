@@ -1,0 +1,38 @@
+#include"Agenda.h"
+#include"Contacto.h"
+#include<vector>
+#include<string>
+#include<iostream>
+#include<cstdio>
+#include<cstdlib>
+
+using namespace std;
+
+Contacto Agenda::insertar(Contacto _contactos)
+{
+	direccion _direcciones;
+	Contacto aux;
+		cout<<"Introduce el nombre de la persona"<<endl;
+		getline(cin,aux._nombre);
+		cout<<"Introduce los apellidos de la persona"<<endl;
+		getline(cin,aux._apellidos);
+		cout<<"Introduce el DNI de la persona"<<endl;
+		getline(cin,aux._dni);
+		cout<<"Introduce el numero de telefono fijo de la persona"<<endl;
+		cin>>aux._telefono;
+		cout<<"Introduce el correo electronico de la persona"<<endl;
+		cin>>aux._email;
+		cout<<"Introduce la direccion de la persona"<<endl;
+		getline(cin,aux._direcciones);
+		cout<<"Introduce informacion adicional sobre el contacto"<<endl;
+		getline(cin,aux._anotaciones);
+		cout<<"Introduce o 1 si es favorito o 0 si no es favorito"<<endl;
+		cin>>aux._favorito;
+		cout<<"Introduce el nick de las redes sociales a las que pertenece el contacto"<<endl;
+		cin>>aux._redes;
+
+		_contactos.push_back(aux);
+
+		return _contactos;
+}
+

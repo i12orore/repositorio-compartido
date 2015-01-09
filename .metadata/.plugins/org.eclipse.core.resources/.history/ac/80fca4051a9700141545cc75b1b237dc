@@ -1,0 +1,40 @@
+/*
+ * Contacto.h
+ *
+ *  Created on: 04/12/2014
+ *      Author: i42ditac
+ */
+
+#ifndef CONTACTO_H_
+#define CONTACTO_H_
+
+class Contacto {
+private:
+		std::string _nombre;
+		std::string _apellidos;
+		std::string _dni;
+		std::string _direccion;
+public:
+	Contacto();
+	virtual ~Contacto();
+	const std::string& getAnotaciones() const;
+	void setAnotaciones(const std::string& anotaciones);
+	const std::string& getApellidos() const;
+	void setApellidos(const std::string& apellidos);
+	const direccion& getDirecciones() const;
+	void setDirecciones(const direccion& direcciones);
+	const std::string& getDni() const;
+	void setDni(const std::string& dni);
+	const emails& getEmail() const;
+	void setEmail(const emails& email);
+	bool isFavorito() const;
+	void setFavorito(bool favorito);
+	const std::string& getNombre() const;
+	void setNombre(const std::string& nombre);
+	const redes_sociales& getRedes() const;
+	void setRedes(const redes_sociales& redes);
+	telefonos getTelefono() const;
+	void setTelefono(telefonos telefono);
+};
+
+#endif /* CONTACTO_H_ */

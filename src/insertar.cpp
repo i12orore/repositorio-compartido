@@ -7,20 +7,17 @@
 */
 
 
-#include"Agenda.h"
-#include"Contacto.h"
-#include<vector>
-#include<string>
-#include<iostream>
-#include<cstdio>
-#include<cstdlib>
+#include "Agenda.h"
+#include "Contacto.h"
+#include <vector>
+#include <cstdlib>
+#include <iostream>
 
 using namespace std;
 //Insertar un contacto al final de la agenda
 void Agenda::insertar(Contacto _contactos)
 {
-	Contacto aux;
-		cout<<"Introduce el nombre de la persona"<<endl;
+		/*cout<<"Introduce el nombre de la persona"<<endl;
 		getline(cin,aux._nombre);
 		cout<<"Introduce los apellidos de la persona"<<endl;
 		getline(cin,aux._apellidos);
@@ -29,7 +26,7 @@ void Agenda::insertar(Contacto _contactos)
 		cout<<"Introduce el telefono de la persona"<<endl;
 		cin>>aux._telefono;
 		cout<<"Introduce la direccion de la persona"<<endl;
-		getline(cin,aux._direccion);
+		getline(cin,aux._direccion);*/
 
 		_contactos.push_back(aux);
 
@@ -40,6 +37,7 @@ void Agenda::insertar(Contacto _contactos)
 void Agenda::borrar(Contacto _contactos,string dni)
 {
 	int encontrado=0;
+	int i;
 	for(i=0;i<_contactos.size();i++)
 	{
 		if(( dni==_contactos._dni)&&(encontrado==0))
