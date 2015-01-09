@@ -6,6 +6,7 @@
  */
 
 #include "Agenda.h"
+#include <vector>
 
 Agenda::Agenda() {
 	// TODO Auto-generated constructor stub
@@ -86,46 +87,55 @@ void Agenda::buscarContacto(string apellido,vector<Contacto> & aux)
 	
 }
 
-void Agenda::modificar(std::string dni, Contacto c) {
-    Contacto aux;	//Objeto contacto auxiliar para almacenar los nuevos datos
+bool Agenda::modificar(vector<Contacto> &c, string dni) {
+	bool enc = false;	//Guarda si el usuario ha sido encontrado, por defecto false
+    Contacto aux;		//Objeto contacto auxiliar para almacenar los nuevos datos
 
-    //Para modificar cualquier campo es necesario que el usuario escriba los datos por los que sera reemplazado,
-    //de lo contrario no se actualizara el campo
-    std::cout << "Deja el campo vacio si no lo quieres modificar";
+    for(int i = 0; i < c.size(); i++) {
+    	if(c[i].getDni() == dni) {
+    		enc = true;		//Usuario encontrado
 
-    //Modificar nombre
-    std::cout << "Nombre: ";
-    getline(std::cin, aux._nombre);
-    if(!aux._nombre.empty())
-        c.setNombre(aux._nombre);
+    		//Para modificar cualquier campo es necesario que el usuario escriba los datos por los que sera reemplazado,
+			//de lo contrario no se actualizara el campo
+			std::cout << "Deja el campo vacio si no lo quieres modificar";
 
-    //Modificar apellidos
-    std::cout << "Apellidos: ";
-    getline(std::cin, aux._apellidos);
-    if(!aux._apellidos.empty())
-        c.setApellidos(aux._apellidos);
+			//Modificar nombre
+			std::cout << "Nombre: ";
+			getline(std::cin, aux._nombre);
+			if(!aux._nombre.empty())
+				c[i].setNombre(aux._nombre);
 
-    //Modificar DNI
-    std::cout << "DNI: ";
-    getline(std::cin, aux._dni);
-    if(!aux._dni.empty())
-        c.setDni(aux._dni);
+			//Modificar apellidos
+			std::cout << "Apellidos: ";
+			getline(std::cin, aux._apellidos);
+			if(!aux._apellidos.empty())
+				c[i].setApellidos(aux._apellidos);
 
-    //Modificar telefono
-    std::cout << "Telefono movil: ";
-    getline(std::cin, aux._telefono);
-    if(!aux._telefono.empty())
-        c.setTelefono(aux._telefono);
+			//Modificar DNI
+			std::cout << "DNI: ";
+			getline(std::cin, aux._dni);
+			if(!aux._dni.empty())
+				c[i].setDni(aux._dni);
 
-    //Modificar email
-    std::cout << "Email peronal: ";
-    getline(std::cin, aux._email);
-    if(!aux._email.empty())
-        c.setEmail(aux._email);
+			//Modificar telefono
+			std::cout << "Telefono movil: ";
+			getline(std::cin, aux._telefono);
+			if(!aux._telefono.empty())
+				c[i].setTelefono(aux._telefono);
 
-    //Modificar direccion
-    std::cout << "Direccion: ";
-    getline(std::cin, aux._direccion);
-    if(!aux._direccion.empty())
-        c.setDireccion(aux._direccion);
+			//Modificar email
+			std::cout << "Email peronal: ";
+			getline(std::cin, aux._email);
+			if(!aux._email.empty())
+				c[i].setEmail(aux._email);
+
+			//Modificar direccion
+			std::cout << "Direccion: ";
+			getline(std::cin, aux._direccion);
+			if(!aux._direccion.empty())
+				c[i].setDireccion(aux._direccion);
+    	}
+    }
+
+    return enc;
 }

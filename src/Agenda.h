@@ -21,14 +21,14 @@
 
 class Agenda {
 private:
-	vector <Contacto> _contactos;
+	vector<Contacto> _contactos;
 public:
 	Agenda();
 	virtual ~Agenda();
 
 	void insertar(Contacto _contactos);
 	void borrar(Contacto _contactos,string dni);
-	void modificar(string dni, Contacto c);
+	bool modificar(vector<Contacto> &c, string dni);
 
 	vector<Contacto> getContactos() const {
 		return _contactos;
