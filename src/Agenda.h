@@ -38,8 +38,8 @@ public:
 	void setContactos(vector<Contacto> contactos) {
 		_contactos = contactos;
 	}
-	vector<Contacto> getContactos(vector<Contacto> contactos) {
-			return _contactos;
+	vector<Contacto> getContactos() {
+		return _contactos;
 	}
 
 	void buscarContacto(string apellido,vector<Contacto> & aux);
