@@ -20,6 +20,9 @@ main()
 	int opcion;
 	Contacto aux();
 	Contacto aux2(aux);
+	Agenda ag;
+	string fichero;
+	vector <Contacto> contactos;
 
 	while(opcion!=10)
 	{
@@ -71,7 +74,28 @@ main()
 			case 4:
 				cout<<"Mostrar los contactos favoritos"<<endl;
 				BuscarFavoritos(&_aux2);
-				break;		
+				break;
+			case 6:
+				cout<<"Se ha seleccionado la opción Guardar la agenda"<<endl;
+				cout<<"Introduzca el fichero en el cual quiere guardar la agenda"<<endl;
+				getchar();
+				getline(cin,fichero);
+				guardar(ag.getContactos(),fichero);
+				cout<< "Guardando los contactos de la agenda en un fichero"<<endl;
+				break;
+			case 7:
+				cout<< "Se ha seleccionado la opción Cargar la agenda desde un fichero"<<endl;
+				cout<< "Introduzca el fichero del cual quiere cargar la agenda"<<endl;
+				getchar();
+				getline(cin,fichero);
+				cargar(contactos,fichero);
+				ag.setContactos(contactos);
+				cout<< "Cargando los datos desde fichero"<<endl;
+				break;
+				
+			default:
+				cout<<"No se ha introducido ninguna opción válida"<<endl;
+				
 		}
 
 
