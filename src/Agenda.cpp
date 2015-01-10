@@ -139,3 +139,7 @@ bool Agenda::modificar(vector<Contacto> &c, string dni) {
 
     return enc;
 }
+
+void Agenda::ordenar(vector<Contacto> &c) {
+	sort(c.begin(), c.end());
+}

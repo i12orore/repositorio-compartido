@@ -29,6 +29,7 @@ public:
 	void insertar(Contacto _contactos);
 	void borrar(Contacto _contactos,string dni);
 	bool modificar(vector<Contacto> &c, string dni);
+	void ordenar(vector<Contacto> &c);
 
 	vector<Contacto> getContactos() const {
 		return _contactos;
@@ -36,6 +37,9 @@ public:
 
 	void setContactos(vector<Contacto> contactos) {
 		_contactos = contactos;
+	}
+	vector<Contacto> getContactos(vector<Contacto> contactos) {
+			return _contactos;
 	}
 
 	void buscarContacto(string apellido,vector<Contacto> & aux);

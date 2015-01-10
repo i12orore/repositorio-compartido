@@ -13,6 +13,7 @@
 #include <cstdio>
 #include <string>
 #include <cstring>
+#include <vector>
 
 using namespace std;
 main()
@@ -35,6 +36,7 @@ main()
 		cout<<"\t-5. Buscar por apellidos\n";
 		cout<<"\t-6. Guardar en fichero\n";
 		cout<<"\t-7. Cargar desde fichero\n";
+		cout<<"\t-8. Ordenar contactos por apellido\n";
 		cout<<"\t-10. Salir\n";
 		cout<<"---------------------------------------------\n";
 		cin>>opcion;
@@ -66,12 +68,26 @@ main()
 				cin>>dni;
 				aux2.setContactos(borrar(dni,aux2.getContactos()));
 				break;
+			case 2:
+				string d;
+				cout << "Introduce el DNI del usuario a modificar";
+				cin >> d;
+
+				Agenda a;
+				vector<Contacto> c;
+				bool m;
+
+				c = a.getContactos();
+				a.modificar(c, d);
+
+				(m) ? cout << "Usuario modficado" : cout << "Usuario no encontrado";
+				break;
 			case 4:
 				cout<<"Introduce el apellido del contacto que deseas buscar"<<endl;
 				cin>>apellido;
 				buscarContacto(apellido, &_aux2)
 				break;
-			case 4:
+			case 5:
 				cout<<"Mostrar los contactos favoritos"<<endl;
 				BuscarFavoritos(&_aux2);
 				break;
@@ -92,23 +108,21 @@ main()
 				ag.setContactos(contactos);
 				cout<< "Cargando los datos desde fichero"<<endl;
 				break;
-				
+			case 8:
+				cout << "Ordenando contactos";
+
+				Agenda a;
+				vector<Contacto> c;
+
+				c = a.getContactos();
+				a.ordenar(c);
+
+				cout << "Contactos ordenados";
+				break;
 			default:
 				cout<<"No se ha introducido ninguna opción válida"<<endl;
 				
 		}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	}
