@@ -80,6 +80,9 @@ public:
 	void setEmail(const string& email) {
 		_email = email;
 	}
+	
+	void introducirDatos();
+	//bool operator<(const Contacto &a, const Contacto &b);
 };
 
 #endif /* CONTACTO_H_ */

@@ -20,7 +20,7 @@ using namespace std;
 int main()
 {
 	int opcion;
-	Contacto aux();
+	Contacto aux;
 	Contacto aux2(aux);
 	Agenda ag;
 	string fichero,nombre,apellidos,dni,direccion,telefono;
@@ -45,6 +45,8 @@ int main()
 		switch(opcion)
 		{
 			case 0:
+				
+				/*aux.introducirDatos();
 				getchar();
 				cout<<"Introduce el nombre de la persona\n";
 				getline(cin,nombre);
@@ -62,13 +64,16 @@ int main()
 				aux.setApellidos(apellidos);
 				aux.setDni(dni);
 				aux.setTelefono(telefono);
-				aux.setDireccion(direccion);
-				aux2.insertar(aux);
+				aux.setDireccion(direccion);*/
+				aux.introducirDatos();
+				//aux2.insertar(aux);
+				ag.insertar(aux);
 				break;
 			case 1:
 				cout<<"Introduce dni del contacto que deseas eliminar"<<endl;
 				cin>>dni;
 				aux2.setContactos(borrar(dni,aux2.getContactos()));
+				//ag.setContactos(borrar(dni,ag.getContactos()));
 				break;
 			case 2:
 				string d;
