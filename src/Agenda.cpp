@@ -87,6 +87,11 @@ void Agenda::buscarContacto(string apellido,vector<Contacto> & aux)
 	
 }
 
+//Se pasa el vector de contactos y el dni del contacto a modificar, si lo encuentra se modifica
+/*####
+ * Lo ideal seria utilizar el metodo buscar y no tener que implementar repetidas veces el mismo bucle, pero
+ * no ha sido hecho asi
+ ####*/
 bool Agenda::modificar(vector<Contacto> &c, string dni) {
 	bool enc = false;	//Guarda si el usuario ha sido encontrado, por defecto false
     Contacto aux;		//Objeto contacto auxiliar para almacenar los nuevos datos
@@ -136,10 +141,12 @@ bool Agenda::modificar(vector<Contacto> &c, string dni) {
 				c[i].setDireccion(aux._direccion);
     	}
     }
-
+    //Devuelve el resultado de la modificacion
     return enc;
 }
 
+//El vecto de contactos se pasa por referencia para ser modificado desde la funcion
 void Agenda::ordenar(vector<Contacto> &c) {
+	//Ordena los objetos contacto del vector
 	sort(c.begin(), c.end());
 }
