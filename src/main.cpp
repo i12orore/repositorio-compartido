@@ -8,6 +8,7 @@
 */
 #include "Agenda.h"
 #include "Contacto.h"
+#include "GestorDBFichero.h"
 #include <iostream>
 #include <stdio.h>
 #include <cstdio>
@@ -16,14 +17,15 @@
 #include <vector>
 
 using namespace std;
-main()
+int main()
 {
 	int opcion;
 	Contacto aux();
 	Contacto aux2(aux);
 	Agenda ag;
-	string fichero;
+	string fichero,nombre,apellidos,dni,direccion,telefono;
 	vector <Contacto> contactos;
+	//vector<Contacto> c;
 
 	while(opcion!=10)
 	{
@@ -73,23 +75,23 @@ main()
 				cout << "Introduce el DNI del usuario a modificar";
 				cin >> d;
 
-				Agenda a;
-				vector<Contacto> c;
+				//Agenda a;
+				//vector<Contacto> c;
 				bool m;
 
-				c = a.getContactos();
-				a.modificar(c, d);
+				contactos = ag.getContactos();
+				ag.modificar(contactos, d);
 
 				(m) ? cout << "Usuario modficado" : cout << "Usuario no encontrado";
 				break;
 			case 4:
 				cout<<"Introduce el apellido del contacto que deseas buscar"<<endl;
-				cin>>apellido;
-				buscarContacto(apellido, &_aux2)
+				cin>>apellidos;
+				buscarContacto(apellidos, &aux2)
 				break;
 			case 5:
 				cout<<"Mostrar los contactos favoritos"<<endl;
-				BuscarFavoritos(&_aux2);
+				BuscarFavoritos(&aux2);
 				break;
 			case 6:
 				cout<<"Se ha seleccionado la opción Guardar la agenda"<<endl;
@@ -111,11 +113,11 @@ main()
 			case 8:
 				cout << "Ordenando contactos";
 
-				Agenda a;
-				vector<Contacto> c;
+				//Agenda a;
+				//vector<Contacto> c;
 
-				c = a.getContactos();
-				a.ordenar(c);
+				contactos = ag.getContactos();
+				ag.ordenar(contactos);
 
 				cout << "Contactos ordenados";
 				break;
@@ -126,5 +128,6 @@ main()
 
 
 	}
+	return 0;
 
 }
